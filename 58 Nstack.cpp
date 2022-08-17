@@ -53,7 +53,7 @@ public:
     }
 
     // Pops top element from Mth Stack. Returns -1 if the stack is empty, otherwise returns the popped element.
-    int pop(int m)
+    int pop(int m) 
     {
         // Write your code here.
         if( top[m-1] == -1)
