@@ -9,6 +9,7 @@
         "utility": "cpp",
         "vector": "cpp",
         "xstring": "cpp",
-        "33 recursion find ele in sorted and rotated array ,cpp": "cpp"
+        "33 recursion find ele in sorted and rotated array ,cpp": "cpp",
+        "ostream": "cpp"
     }
 }
