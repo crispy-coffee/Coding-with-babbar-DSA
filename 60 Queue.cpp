@@ -7,8 +7,8 @@ public:
     
     Queue() {
         arr = new int[10000];
-        fronti = -1;
-        rear = -1;
+        fronti = 0;
+        rear = 0;
         
     }
 
@@ -24,8 +24,10 @@ public:
     void enqueue(int data) {
         // Implement the enqueue() function
         if(rear < 10000){
-            rear++;
             arr[rear] = data;
+            rear++;
+            
+            
         }
     }
 
@@ -34,9 +36,9 @@ public:
         if(rear == fronti)
             return -1;
         else{
-            fronti++;
             int data = arr[fronti];
-            
+            arr[fronti] = -1;
+            fronti++;
             return data;
         }
     }
@@ -46,6 +48,6 @@ public:
         if(rear==fronti)
             return -1;
         else
-            return arr[fronti+1];
+            return arr[fronti];
     }
 };
