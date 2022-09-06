@@ -3,55 +3,58 @@ using namespace std;
 
 /* A binary tree tNode has data, a pointer to left child
 and a pointer to right child */
-struct tNode {
+struct tNode
+{
 	int data;
-	struct tNode* left;
-	struct tNode* right;
+	struct tNode *left;
+	struct tNode *right;
 };
 
 /* Function to traverse the binary tree without recursion
 and without stack */
-void MorrisTraversal(struct tNode* root)
+void MorrisTraversal(struct tNode *root)
 {
-	tNode* curr = root;
-     tNode* pred;
+	tNode *curr = root;
+	tNode *pred;
 
-     if(root==NULL)
-     return;
-    while(curr!= NULL){
+	if (root == NULL)
+		return;
+	while (curr != NULL)
+	{
 
-        if(curr->left == NULL){
+		if (curr->left == NULL)
+		{
 
-            cout << "1. Data " << curr->data <<endl;
-            curr = curr->right;
-        }else{
-             pred = curr->left;
-            while(pred->right != NULL && pred->right != curr)
-                pred = pred->right;
+			cout << "1. Data " << curr->data << endl;
+			curr = curr->right;
+		}
+		else
+		{
+			pred = curr->left;
+			while (pred->right != NULL && pred->right != curr)
+				pred = pred->right;
 
-            if(pred->right == NULL){
-                pred->right = curr;
-                curr = curr->left;
-            }else{
-                pred->right = NULL;
-                cout << "2. Data " << curr->data <<endl;
-                curr = curr->right;
-            } 
-
-
-
-        }
-
-
-    }
+			if (pred->right == NULL)
+			{
+				pred->right = curr;
+				curr = curr->left;
+			}
+			else
+			{
+				pred->right = NULL;
+				cout << "2. Data " << curr->data << endl;
+				curr = curr->right;
+			}
+		}
+	}
 }
 
 /* UTILITY FUNCTIONS */
 /* Helper function that allocates a new tNode with the
 given data and NULL left and right pointers. */
-struct tNode* newtNode(int data)
+struct tNode *newtNode(int data)
 {
-	struct tNode* node = new tNode;
+	struct tNode *node = new tNode;
 	node->data = data;
 	node->left = NULL;
 	node->right = NULL;
@@ -70,7 +73,7 @@ int main()
 	/ \
 	4	 5
 */
-	struct tNode* root = newtNode(1);
+	struct tNode *root = newtNode(1);
 	root->left = newtNode(2);
 	root->right = newtNode(3);
 	root->left->left = newtNode(4);
