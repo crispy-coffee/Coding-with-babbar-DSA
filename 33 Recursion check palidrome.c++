@@ -20,6 +20,7 @@ bool checkPalindrome(long long n)
     while (n > 0)
     {
         binaryNum.push_back(n % 2);
+        cout << n%2 << " ";
         n = n / 2;
         i = i + 1;
     }

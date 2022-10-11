@@ -11,9 +11,9 @@ ll fibonacci(int num)
     if (num == 1)
         return 1;
 
-    ll ans = fibonacci(num - 1) + fibonacci(num - 2);
+    // ll ans = fibonacci(num - 1) + fibonacci(num - 2);
 
-    return ans;
+    return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
 int main()

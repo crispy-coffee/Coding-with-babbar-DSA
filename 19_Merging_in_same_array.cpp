@@ -16,16 +16,18 @@ using namespace std;
                 
             }
         }
-            while(i<m){
-                nums1[k+i] = nums1[i];
-                k++;
-                i++;
-            }
-            while(j<n){
-                nums1[k+j] = nums2[j];
-                k++;
-                j++;
-            }
+
+        while(i<m){
+            nums1[k+i] = nums1[i];
+            k++;
+            i++;
+        }
+        
+        while(j<n){
+            nums1[k+j] = nums2[j];
+            k++;
+            j++;
+        }
         
         for(int i = 0;i<nums1.size();i++){
             // nums1[i] = nums3[i];

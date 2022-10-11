@@ -3,8 +3,7 @@ using namespace std;
 
 void InsertionSort(int arr[], int size)
 {
-    fo
-    r (int i = 1; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
         int temp = arr[i];
         int j = i-1;
