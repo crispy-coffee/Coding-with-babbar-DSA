@@ -111,7 +111,7 @@ bool search(Node*root, int k){
     return search(root->right, k);
 }
 
-//for min value from right node
+//for min value from right node 
 Node* minval(Node* root){
     while(root->left != NULL)
     root = root->left;
