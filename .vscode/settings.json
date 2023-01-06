@@ -11,6 +11,14 @@
         "xstring": "cpp",
         "33 recursion find ele in sorted and rotated array ,cpp": "cpp",
         "ostream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "xlocale": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "type_traits": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp"
     }
 }
