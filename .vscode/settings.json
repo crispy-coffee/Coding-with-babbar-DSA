@@ -19,6 +19,7 @@
         "stack": "cpp",
         "type_traits": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "map": "cpp"
     }
 }
