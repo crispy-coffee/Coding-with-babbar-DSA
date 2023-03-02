@@ -18,8 +18,6 @@ int FirstOccurence(int arr[], int size, int key)
             end = mid-1;
 
         }
-
-
         // right wali side chale jao
         else if (key > arr[mid])
         {

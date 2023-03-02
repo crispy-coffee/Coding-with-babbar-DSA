@@ -20,9 +20,7 @@ int main(){
         s.pop();
     }
 
-
     cout << ans <<endl;
-    cout << 3/2 <<endl;
 
 return 0;
 }

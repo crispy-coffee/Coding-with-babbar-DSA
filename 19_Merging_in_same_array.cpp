@@ -15,6 +15,10 @@ using namespace std;
                 j++;
                 
             }
+            for(auto i:nums1){
+                cout << i << " ";
+            }cout <<endl;
+
         }
 
         while(i<m){

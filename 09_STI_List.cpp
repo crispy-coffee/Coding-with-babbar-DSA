@@ -4,7 +4,8 @@ using namespace std;
 
 int main(){
 
-list<int> l;
+list<int> l; // it is simply the linked list but for travesring we need to use iterator
+
 
 push_back()
 push_front()
@@ -19,7 +20,7 @@ size()
 empty()  check where the deque is emply or not
 erase() erase at specific point
 clear() clear all the deque
-at()  give the element at specific index
+at()  g ive the element at specific index
 
 return 0;
 }
