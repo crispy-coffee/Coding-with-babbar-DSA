@@ -55,6 +55,28 @@ public:
         return ans;
     }
 
+    // 3 alternative version of tabulation
+    /*
+    int Tabulation(vector<int>& nums){
+        int n = nums.size();
+        vector<unordered_map<int,int>> dp(n+1);
+        int ans = 0;
+        for(int i = 1; i < n; i++){
+            for(int j = 0; j<i; j++){
+                int diff = nums[i]-nums[j];
+                
+                if(dp[j].count(diff)){
+                    dp[i][diff] = dp[j][diff] + 1; // j ka dp se le aaye aur i ka 1 add kr diya
+                }else{
+                    dp[i][diff] =  1 + 1; // 1 j ka aur 1 x ka total 2
+                }
+
+                ans = max(ans, dp[i][diff]);
+            }
+        }
+        return ans;
+    }
+    */
 
     int longestArithSeqLength(vector<int>& nums) {
         int n = nums.size();
