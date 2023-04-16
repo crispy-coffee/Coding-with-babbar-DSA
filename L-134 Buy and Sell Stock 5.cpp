@@ -91,6 +91,19 @@ public:
         return curr[true];
     }
 
+    // 5 Most Optimize approach
+    // Approach : https://www.youtube.com/watch?v=DUFM1B4m3GE&ab_channel=SuperLazyCoder
+    int final(vector<int>& prices, int fee){
+        int n = prices.size();
+        int cash = 0, hold = -prices[0];
+        for(int i=1; i<n; i++){
+            cash = max(cash, hold + prices[i] - fee);
+            hold = max(hold, cash - prices[i]);
+        }
+        return cash;
+    }
+
+
     int maxProfit(vector<int>& prices, int fee) {
         int n = prices.size();
         
@@ -105,7 +118,10 @@ public:
         // return Tabulation(prices, fee);
 
         // 4 Space Optimization
-        return SpaceOptimization(prices, fee);
+        // return SpaceOptimization(prices, fee);
 
+        // 5 Most Optimize approach
+        return final(prices, fee);
+        
     }
 };
