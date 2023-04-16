@@ -64,10 +64,10 @@ public:
     // 4 Space Optimization
     int SpaceOptimization(string& s){
         int n = s.size();
-        vector<int> curr(n+1, 0), next(n+1, 1);
+        vector<int> curr(n+1, 0), next(n+1, 0);
 
         for(int start = n-1; start >= 0; start--){
-            curr[start] = 1;
+            curr[start] = 1;    //to udnerstand ->leetcode ->note
             for(int end = start+1; end <= n-1; end++){
                 int ans = 1;
                 if(s[start] == s[end]){
