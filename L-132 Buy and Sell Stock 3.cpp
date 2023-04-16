@@ -72,7 +72,7 @@ public:
     // 4 Space Optimization
     int SpaceOptimization(vector<int>& prices){
         int n = prices.size();
-        // vector<vector<int>> dp(n+2, vector<int>(2, 0));
+        
         vector<vector<int>> curr(2, vector<int>(3,0)), next(2, vector<int>(3,0));
 
         for(int index=n-1; index>=0; index--){
