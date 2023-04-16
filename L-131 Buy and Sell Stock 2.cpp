@@ -9,12 +9,12 @@ public:
         int profit = 0;
         if(buy){
             int buykaro = -prices[index] +  Recursion(prices, index+1, false);
-            int sellkaro =  Recursion(prices, index+1, true);
-            profit = max(buykaro, sellkaro);
+            int skipkaro =  Recursion(prices, index+1, true);
+            profit = max(buykaro, skipkaro);
         }else{
-            int buykaro = prices[index] +  Recursion(prices, index+1, true);
-            int sellkaro =  Recursion(prices, index+1, false);
-            profit = max(buykaro, sellkaro);
+            int sellkaro = prices[index] +  Recursion(prices, index+1, true);
+            int skipkaro =  Recursion(prices, index+1, false);
+            profit = max(sellkaro, skipkaro);
         }
 
         return profit;
@@ -33,12 +33,12 @@ public:
         int profit = 0;
         if(buy){
             int buykaro = -prices[index] +  Memoization(prices, index+1, false, dp);
-            int sellkaro =  Memoization(prices, index+1, true, dp);
-            profit = max(buykaro, sellkaro);
+            int skipkaro =  Memoization(prices, index+1, true, dp);
+            profit = max(buykaro, skipkaro);
         }else{
-            int buykaro = prices[index] +  Memoization(prices, index+1, true, dp);
-            int sellkaro =  Memoization(prices, index+1, false, dp);
-            profit = max(buykaro, sellkaro);
+            int sellkaro = prices[index] +  Memoization(prices, index+1, true, dp);
+            int skipkaro =  Memoization(prices, index+1, false, dp);
+            profit = max(sellkaro, skipkaro);
         }
 
         return dp[index][buy] = profit;
@@ -54,12 +54,12 @@ public:
                 int profit = 0;
                 if(buy){
                     int buykaro = -prices[index] +  dp[index+1][false];
-                    int sellkaro = dp[index+1][true];
-                    profit = max( buykaro, sellkaro);
+                    int skipkaro = dp[index+1][true];
+                    profit = max(buykaro, skipkaro);
                 }else{
-                    int buykaro = prices[index] + dp[index+1][true];
-                    int sellkaro = dp[index+1][false];
-                    profit = max( buykaro, sellkaro);
+                    int sellkaro = prices[index] + dp[index+1][true];
+                    int skipkaro = dp[index+1][false];
+                    profit = max(sellkaro, skipkaro);
                 }
                 dp[index][buy] = profit;
             }   
@@ -78,12 +78,12 @@ public:
                 int profit = 0;
                 if(buy){
                     int buykaro = -prices[index] +  next[false];
-                    int sellkaro = next[true];
-                    profit = max( buykaro, sellkaro);
+                    int skipkaro = next[true];
+                    profit = max(buykaro, skipkaro);
                 }else{
-                    int buykaro = prices[index] + next[true];
-                    int sellkaro = next[false];
-                    profit = max( buykaro, sellkaro);
+                    int sellkaro = prices[index] + next[true];
+                    int skipkaro = next[false];
+                    profit = max(sellkaro, skipkaro);
                 }
                 curr[buy] = profit;
             }
