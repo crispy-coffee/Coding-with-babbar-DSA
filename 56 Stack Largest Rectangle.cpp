@@ -14,9 +14,9 @@ public:
 
     void prevsmallelement(vector<int>& heights, vector<int>& prev, int n){
         stack<int> s;
-        s.push(n);
+        s.push(-1);
         for(int i=0; i<n; i++){
-            while(s.top() != n and heights[s.top()] >= heights[i]){
+            while(s.top() != -1 and heights[s.top()] >= heights[i]){
                 s.pop();
             }
             prev[i] = s.top();
@@ -42,5 +42,4 @@ public:
 
         return area;
     }
-    
 };
