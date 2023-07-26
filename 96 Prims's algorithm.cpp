@@ -17,7 +17,7 @@ public:
         key[src] = 0;
         parent[src] = -1;
 
-        int n = adj.size();
+        int n = adj.size(); 
 
         for(int i=0; i<n; i++){
             int mini = INT_MAX;
