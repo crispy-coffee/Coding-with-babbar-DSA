@@ -11,7 +11,7 @@ info Recursion(TreeNode<int>* root, int& ans){
         return {INT_MAX, INT_MIN, 0, true};
     }
 
-    info left = Recursion(root->left, ans);
+    info left = Recursion(root->left, ans); 
     info right = Recursion(root->right, ans);
 
     info curr;
